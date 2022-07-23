@@ -1,0 +1,119 @@
+make -f Makefile results.xml
+make[1]: Entering directory '/workspace/challenges-rpjayaraman/level1_design1'
+MODULE=test_mux      TESTCASE= TOPLEVEL=mux           TOPLEVEL_LANG=verilog \
+         /home/linuxbrew/.linuxbrew/bin/vvp -M /workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp 
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:76   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     cocotb.gpi                         ../gpi/GpiCommon.cpp:99   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     Running tests with cocotb v1.6.2 from /workspace/.pyenv_mirror/fakeroot/versions/3.8.13/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     Seeding Python random module with 1658556095
+     0.00ns WARNING  Pytest not found, assertion rewriting will not occur
+     0.00ns INFO     Found test test_mux.test_mux
+     0.00ns INFO     running test_mux (1/1)
+     0.00ns INFO     Starting the test
+     0.00ns INFO     DUT sel: zzzzz
+     0.00ns INFO     expected_value: xx
+     0.00ns ERROR    Mismatch found for sel: dut.sel.value= 0 with Input: dut.inp0.value
+     2.00ns INFO     DUT sel: 00000
+     2.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp1.value sel: 1
+     4.00ns INFO     DUT sel: 00001
+     4.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp2.value sel: 2
+     6.00ns INFO     DUT sel: 00010
+     6.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp3.value sel: 3
+     8.00ns INFO     DUT sel: 00011
+     8.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp4.value sel: 4
+    10.00ns INFO     DUT sel: 00100
+    10.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp5.value sel: 5
+    12.00ns INFO     DUT sel: 00101
+    12.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp6.value sel: 6
+    14.00ns INFO     DUT sel: 00110
+    14.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp7.value sel: 7
+    16.00ns INFO     DUT sel: 00111
+    16.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp8.value sel: 8
+    18.00ns INFO     DUT sel: 01000
+    18.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp9.value sel: 9
+    20.00ns INFO     DUT sel: 01001
+    20.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp10.value sel: 10
+    22.00ns INFO     DUT sel: 01010
+    22.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp11.value sel: 11
+    24.00ns INFO     DUT sel: 01011
+    24.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp12.value sel: 12
+    26.00ns INFO     DUT sel: 01100
+    26.00ns INFO     expected_value: 00
+    26.00ns ERROR    Mismatch found for sel: dut.sel.value= 13 with Input: dut.inp13.value
+    28.00ns INFO     DUT sel: 01101
+    28.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp14.value sel: 14
+    30.00ns INFO     DUT sel: 01110
+    30.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp15.value sel: 15
+    32.00ns INFO     DUT sel: 01111
+    32.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp16.value sel: 16
+    34.00ns INFO     DUT sel: 10000
+    34.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp17.value sel: 17
+    36.00ns INFO     DUT sel: 10001
+    36.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp18.value sel: 18
+    38.00ns INFO     DUT sel: 10010
+    38.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp19.value sel: 19
+    40.00ns INFO     DUT sel: 10011
+    40.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp20.value sel: 20
+    42.00ns INFO     DUT sel: 10100
+    42.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp21.value sel: 21
+    44.00ns INFO     DUT sel: 10101
+    44.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp22.value sel: 22
+    46.00ns INFO     DUT sel: 10110
+    46.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp23.value sel: 23
+    48.00ns INFO     DUT sel: 10111
+    48.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp24.value sel: 24
+    50.00ns INFO     DUT sel: 11000
+    50.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp25.value sel: 25
+    52.00ns INFO     DUT sel: 11001
+    52.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp26.value sel: 26
+    54.00ns INFO     DUT sel: 11010
+    54.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp27.value sel: 27
+    56.00ns INFO     DUT sel: 11011
+    56.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp28.value sel: 28
+    58.00ns INFO     DUT sel: 11100
+    58.00ns INFO     expected_value: 10
+PASSING: MUX working for Input: dut.inp29.value sel: 29
+    60.00ns INFO     ####################### Test 1 DONE ########################################
+    60.00ns INFO     Checking Corner case for inp0,inp29 and default test for Inp30
+    62.00ns INFO     Sel: 0, Input: 3, Output: 3
+    64.00ns INFO     Sel: 29, Input: 2, Output: 2
+    66.00ns INFO     Sel: 30, Input: 2, Output: 0
+    66.00ns INFO     ####################### Test 2 DONE ########################################
+    66.00ns INFO     test_mux passed
+    66.00ns INFO     **************************************************************************************
+                     ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                     **************************************************************************************
+                     ** test_mux.test_mux              PASS          66.00           0.01       7680.93  **
+                     **************************************************************************************
+                     ** TESTS=1 PASS=1 FAIL=0 SKIP=0                 66.00           0.02       3535.44  **
+                     **************************************************************************************
+                     
+make[1]: Leaving directory '/workspace/challenges-rpjayaraman/level1_design1'
