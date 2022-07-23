@@ -1,0 +1,141 @@
+make -f Makefile results.xml
+make[1]: Entering directory '/workspace/challenges-rpjayaraman/level1_design2'
+MODULE=test_seq_detect_1011      TESTCASE= TOPLEVEL=seq_detect_1011           TOPLEVEL_LANG=verilog \
+         /home/linuxbrew/.linuxbrew/bin/vvp -M /workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp 
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:76   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     cocotb.gpi                         ../gpi/GpiCommon.cpp:99   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     Running tests with cocotb v1.6.2 from /workspace/.pyenv_mirror/fakeroot/versions/3.8.13/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     Seeding Python random module with 1658577290
+     0.00ns WARNING  Pytest not found, assertion rewriting will not occur
+     0.00ns INFO     Found test test_seq_detect_1011.test_seq_bug1
+     0.00ns INFO     Found test test_seq_detect_1011.test_seq_bug2
+     0.00ns INFO     running test_seq_bug1 (1/2)
+ 15000.00ns INFO     #### CTB: Develop your test here! ######
+ 15000.00ns INFO     #### Directed Test ######
+ 15000.00ns INFO     Initial status - Current State 000 Next State 000 seq_seen 0
+ 30000.00ns INFO     Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+ 40000.00ns INFO     Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+ 50000.00ns INFO     Input: 1 Cur_State 010 Next_State 011 seq_seen 0
+ 60000.00ns INFO     Input: 0 Cur_State 011 Next_State 010 seq_seen 0
+ 70000.00ns INFO     Input: 1 Cur_State 010 Next_State 011 seq_seen 0
+ 80000.00ns INFO     Input: 1 Cur_State 011 Next_State 100 seq_seen 0
+ 90000.00ns INFO     #### End of Directed Test ######
+ 90000.00ns INFO     test_seq_bug1 passed
+ 90000.00ns INFO     running test_seq_bug2 (2/2)
+105000.00ns INFO     #### Randomized Test -> START ! ######
+110000.00ns INFO     Loop: 1 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+Count is too less to detect SEQ
+120000.00ns INFO     Loop: 2 Input: 0 Cur_State 010 Next_State 000 seq_seen 0
+Count is too less to detect SEQ
+130000.00ns INFO     Loop: 3 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+Count is too less to detect SEQ
+140000.00ns INFO     Loop: 4 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+140000.00ns ERROR    No 1011 Sequence Detected i Random test
+150000.00ns INFO     Loop: 5 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+150000.00ns ERROR    No 1011 Sequence Detected i Random test
+160000.00ns INFO     Loop: 6 Input: 1 Cur_State 010 Next_State 011 seq_seen 0
+160000.00ns ERROR    No 1011 Sequence Detected i Random test
+170000.00ns INFO     Loop: 7 Input: 0 Cur_State 011 Next_State 010 seq_seen 0
+170000.00ns ERROR    No 1011 Sequence Detected i Random test
+180000.00ns INFO     Loop: 8 Input: 0 Cur_State 010 Next_State 000 seq_seen 0
+180000.00ns ERROR    No 1011 Sequence Detected i Random test
+190000.00ns INFO     Loop: 9 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+190000.00ns ERROR    No 1011 Sequence Detected i Random test
+200000.00ns INFO     Loop: 10 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+200000.00ns ERROR    No 1011 Sequence Detected i Random test
+210000.00ns INFO     Loop: 11 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+210000.00ns ERROR    No 1011 Sequence Detected i Random test
+220000.00ns INFO     Loop: 12 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+220000.00ns ERROR    No 1011 Sequence Detected i Random test
+230000.00ns INFO     Loop: 13 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+230000.00ns ERROR    No 1011 Sequence Detected i Random test
+240000.00ns INFO     Loop: 14 Input: 1 Cur_State 010 Next_State 011 seq_seen 0
+240000.00ns ERROR    No 1011 Sequence Detected i Random test
+250000.00ns INFO     Loop: 15 Input: 1 Cur_State 011 Next_State 100 seq_seen 0
+250000.00ns ERROR    No 1011 Sequence Detected i Random test
+260000.00ns INFO     Loop: 16 Input: 0 Cur_State 100 Next_State 000 seq_seen 1
+260000.00ns INFO     PASSING seq_seen: 1
+270000.00ns INFO     Loop: 17 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+270000.00ns ERROR    No 1011 Sequence Detected i Random test
+280000.00ns INFO     Loop: 18 Input: 1 Cur_State 001 Next_State 000 seq_seen 0
+280000.00ns ERROR    No 1011 Sequence Detected i Random test
+290000.00ns INFO     Loop: 19 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+290000.00ns ERROR    No 1011 Sequence Detected i Random test
+300000.00ns INFO     Loop: 20 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+300000.00ns ERROR    No 1011 Sequence Detected i Random test
+310000.00ns INFO     Loop: 21 Input: 1 Cur_State 010 Next_State 011 seq_seen 0
+310000.00ns ERROR    No 1011 Sequence Detected i Random test
+320000.00ns INFO     Loop: 22 Input: 0 Cur_State 011 Next_State 010 seq_seen 0
+320000.00ns ERROR    No 1011 Sequence Detected i Random test
+330000.00ns INFO     Loop: 23 Input: 0 Cur_State 010 Next_State 000 seq_seen 0
+330000.00ns ERROR    No 1011 Sequence Detected i Random test
+340000.00ns INFO     Loop: 24 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+340000.00ns ERROR    No 1011 Sequence Detected i Random test
+350000.00ns INFO     Loop: 25 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+350000.00ns ERROR    No 1011 Sequence Detected i Random test
+360000.00ns INFO     Loop: 26 Input: 0 Cur_State 010 Next_State 000 seq_seen 0
+360000.00ns ERROR    No 1011 Sequence Detected i Random test
+370000.00ns INFO     Loop: 27 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+370000.00ns ERROR    No 1011 Sequence Detected i Random test
+380000.00ns INFO     Loop: 28 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+380000.00ns ERROR    No 1011 Sequence Detected i Random test
+390000.00ns INFO     Loop: 29 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+390000.00ns ERROR    No 1011 Sequence Detected i Random test
+400000.00ns INFO     Loop: 30 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+400000.00ns ERROR    No 1011 Sequence Detected i Random test
+410000.00ns INFO     Loop: 31 Input: 1 Cur_State 010 Next_State 011 seq_seen 0
+410000.00ns ERROR    No 1011 Sequence Detected i Random test
+420000.00ns INFO     Loop: 32 Input: 1 Cur_State 011 Next_State 100 seq_seen 0
+420000.00ns ERROR    No 1011 Sequence Detected i Random test
+430000.00ns INFO     Loop: 33 Input: 1 Cur_State 100 Next_State 000 seq_seen 1
+430000.00ns INFO     PASSING seq_seen: 1
+440000.00ns INFO     Loop: 34 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+440000.00ns ERROR    No 1011 Sequence Detected i Random test
+450000.00ns INFO     Loop: 35 Input: 1 Cur_State 001 Next_State 000 seq_seen 0
+450000.00ns ERROR    No 1011 Sequence Detected i Random test
+460000.00ns INFO     Loop: 36 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+460000.00ns ERROR    No 1011 Sequence Detected i Random test
+470000.00ns INFO     Loop: 37 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+470000.00ns ERROR    No 1011 Sequence Detected i Random test
+480000.00ns INFO     Loop: 38 Input: 0 Cur_State 010 Next_State 000 seq_seen 0
+480000.00ns ERROR    No 1011 Sequence Detected i Random test
+490000.00ns INFO     Loop: 39 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+490000.00ns ERROR    No 1011 Sequence Detected i Random test
+500000.00ns INFO     Loop: 40 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+500000.00ns ERROR    No 1011 Sequence Detected i Random test
+510000.00ns INFO     Loop: 41 Input: 0 Cur_State 010 Next_State 000 seq_seen 0
+510000.00ns ERROR    No 1011 Sequence Detected i Random test
+520000.00ns INFO     Loop: 42 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+520000.00ns ERROR    No 1011 Sequence Detected i Random test
+530000.00ns INFO     Loop: 43 Input: 0 Cur_State 001 Next_State 010 seq_seen 0
+530000.00ns ERROR    No 1011 Sequence Detected i Random test
+540000.00ns INFO     Loop: 44 Input: 0 Cur_State 010 Next_State 000 seq_seen 0
+540000.00ns ERROR    No 1011 Sequence Detected i Random test
+550000.00ns INFO     Loop: 45 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+550000.00ns ERROR    No 1011 Sequence Detected i Random test
+560000.00ns INFO     Loop: 46 Input: 1 Cur_State 000 Next_State 001 seq_seen 0
+560000.00ns ERROR    No 1011 Sequence Detected i Random test
+570000.00ns INFO     Loop: 47 Input: 1 Cur_State 001 Next_State 000 seq_seen 0
+570000.00ns ERROR    No 1011 Sequence Detected i Random test
+580000.00ns INFO     Loop: 48 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+580000.00ns ERROR    No 1011 Sequence Detected i Random test
+590000.00ns INFO     Loop: 49 Input: 0 Cur_State 000 Next_State 000 seq_seen 0
+590000.00ns ERROR    No 1011 Sequence Detected i Random test
+590000.00ns INFO     Total number of pass count 2
+590000.00ns INFO     Total number of error count 44
+590000.00ns INFO     test_seq_bug2 failed
+                     Traceback (most recent call last):
+                       File "/workspace/challenges-rpjayaraman/level1_design2/test_seq_detect_1011.py", line 96, in test_seq_bug2
+                         assert err_count == 1, "No 1011 Sequence Detected"
+                     AssertionError: No 1011 Sequence Detected
+590000.00ns INFO     ********************************************************************************************
+                     ** TEST                                STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                     ********************************************************************************************
+                     ** test_seq_detect_1011.test_seq_bug1   PASS       90000.00           0.00   22552716.23  **
+                     ** test_seq_detect_1011.test_seq_bug2   FAIL      500000.00           0.02   23733104.03  **
+                     ********************************************************************************************
+                     ** TESTS=2 PASS=1 FAIL=1 SKIP=0                   590000.00           0.04   13950904.65  **
+                     ********************************************************************************************
+                     
+make[1]: Leaving directory '/workspace/challenges-rpjayaraman/level1_design2'
