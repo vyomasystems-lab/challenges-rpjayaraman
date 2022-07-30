@@ -25,8 +25,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 module apb_v3_sram #(
                     // device parameters
-                    parameter ADDR_BUS_WIDTH=32,        // Width of Address bus i.e. PADDR
-                    parameter DATA_BUS_WIDTH=32,        // Width of Data bus (i.e. PWDATA and PRDATA)
+                    parameter ADDR_BUS_WIDTH=8,        // Width of Address bus i.e. PADDR
+                    parameter DATA_BUS_WIDTH=8,        // Width of Data bus (i.e. PWDATA and PRDATA)
                     parameter MEMSIZE=64,               // RAM memory Size
                     parameter MEM_BLOCK_SIZE=8,         // RAM memory block size
                     parameter RESET_VAL=0,              // Default Reset value of DUT
@@ -146,19 +146,21 @@ module apb_v3_sram #(
                 if(PWRITE == WRITE) begin
                     if(PADDR < MEMSIZE) begin
                         wr_data2mem(MEM_BLOCK_SIZE, DATA_BUS_WIDTH);
-                        PSLVERR = 0;
+                        PSLVERR = 1;
                     end
                     else begin
-                        PSLVERR = 1;
+                        //PSLVERR = 1; Injecting bug
+                        PSLVERR = 0;
                     end
                 end
                 else if(PWRITE == READ) begin
                     if(PADDR < MEMSIZE) begin  // check if read memory is valid
                         PRDATA = memory[PADDR];
-                        PSLVERR = 0;
+                        PSLVERR = 1;
                     end
                     else begin
-                        PSLVERR = 1;
+                        //PSLVERR = 1;Injecting bug
+                        PSLVERR = 0;
                     end
                 end
                 

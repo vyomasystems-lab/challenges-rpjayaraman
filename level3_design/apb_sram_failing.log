@@ -1,0 +1,41 @@
+make -f Makefile results.xml
+make[1]: Entering directory '/workspace/challenges-rpjayaraman/level3_design'
+MODULE=test_apb_v3_sram    TESTCASE= TOPLEVEL=apb_v3_sram          TOPLEVEL_LANG=verilog \
+         /home/linuxbrew/.linuxbrew/bin/vvp -M /workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp 
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:76   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     cocotb.gpi                         ../gpi/GpiCommon.cpp:99   in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     Running tests with cocotb v1.6.2 from /workspace/.pyenv_mirror/fakeroot/versions/3.8.13/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     Seeding Python random module with 1659180428
+     0.00ns WARNING  Pytest not found, assertion rewriting will not occur
+     0.00ns INFO     Found test test_apb_v3_sram.test_apb
+     0.00ns INFO     Found test test_apb_v3_sram.test_slave_err_test
+     0.00ns INFO     running test_apb (1/2)
+     0.00ns INFO     #### Directed Test ######
+ 15000.00ns INFO     #### Writing DATA ######
+ 40000.00ns INFO     WRITE OP: PSEL: 1 PWRITE: 1 PADDR 22 PWDATA 0 PREADY 1
+ 40000.00ns INFO     #### Reading DATA ######
+ 80000.00ns INFO     READ OP: PSEL: 1 PWRITE: 0 PADDR 22 READ_DATA 0 PREADY 1
+ 80000.00ns INFO     #### End of Directed Test ######
+ 80000.00ns INFO     test_apb passed
+ 80000.00ns INFO     running test_slave_err_test (2/2)
+ 80000.00ns INFO     #### Slave Error Test ######
+100000.00ns INFO     Read operation
+120000.00ns INFO     OP: PSEL: 1 PWRITE: 0 PADDR 72 PWDATA 0 PREADY 1
+130000.00ns INFO     Slave Error response is 0
+130000.00ns INFO     test_slave_err_test failed
+                     Traceback (most recent call last):
+                       File "/workspace/challenges-rpjayaraman/level3_design/test_apb_v3_sram.py", line 99, in test_slave_err_test
+                         assert(dut.PSLVERR.value == 1), "Slave error is not asserted"
+                     AssertionError: Slave error is not asserted
+130000.00ns INFO     **********************************************************************************************
+                     ** TEST                                  STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                     **********************************************************************************************
+                     ** test_apb_v3_sram.test_apb              PASS       80000.00           0.01   15731835.73  **
+                     ** test_apb_v3_sram.test_slave_err_test   FAIL       50000.00           0.00   17313234.06  **
+                     **********************************************************************************************
+                     ** TESTS=2 PASS=1 FAIL=1 SKIP=0                     130000.00           0.03    4060948.76  **
+                     **********************************************************************************************
+                     
+wait_cyc_limit:1
+make[1]: Leaving directory '/workspace/challenges-rpjayaraman/level3_design'
