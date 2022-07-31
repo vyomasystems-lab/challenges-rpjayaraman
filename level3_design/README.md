@@ -8,6 +8,8 @@
   The [CoCoTb](https://www.cocotb.org/) based Python test is developed as explained. Provided DUT is Sequence Detector.
 
 ## APB DESIGN
+
+DUT from : https://github.com/courageheart/AMBA_APB_SRAM
   APB slave SRAM core (Design) as a slave of APB Master (Testbench). SRAM as a slave is a memory core used to write and read data via APB bus interface. The slave core also supports an error response in case of accessing out of bound address either for reading or writing, wait state and along with resizable memory block.
   ![image](https://user-images.githubusercontent.com/105109240/182030138-101ef0cf-294c-40dd-a44d-4a302adbee3f.png)
 
@@ -78,3 +80,8 @@ As expected, the bug is captured in the test 2, where it checks for the assertio
 
 ## Is the verification complete?
     Partially YES. We have tested the main feature Write/Read operation and PSLVERR feature, we have covered the most of the design. However, insertion of reset at the middle of test scenario and checking on wait state can also be performed to make the verification complete.
+    
+  Credits: 
+  [1] https://github.com/courageheart/AMBA_APB_SRAM
+  [2] http://web.eecs.umich.edu/~prabal/teaching/eecs373- f12/readings/ARM_AMBA3_APB.pdf
+
