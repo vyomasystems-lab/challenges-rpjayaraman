@@ -30,7 +30,7 @@ After running the testcase, the assert is failed with the following error:
 ## Design Bug
   Based on the above test input and analysing the design, following is the observation:
 
-Analysing the failing log, we can see that after the state **011** if the input bit is zero it has to step back to the previous state which is **010**, but in this case it is moving into IDLE state which violates the overlapping sequence pattern.
+Analysing the [failing log](https://github.com/vyomasystems-lab/challenges-rpjayaraman/blob/master/level1_design2/seq_detect.log), we can see that after the state **011** if the input bit is zero it has to step back to the previous state which is **010**, but in this case it is moving into IDLE state which violates the overlapping sequence pattern.
 
 ```
 Failing one:  60000.00ns INFO     Input: 0 Cur_State 011 Next_State 000 seq_seen 0
@@ -60,7 +60,7 @@ we can observe the following in the passing log:
 ```
 Passing one:  60000.00ns INFO     Input: 0 Cur_State 011 Next_State 010 seq_seen 0
 ```
-The updated design is checked in as seq_detect_1011_fix.v
+The updated design is checked in as [seq_detect_1011_fix.v](https://github.com/vyomasystems-lab/challenges-rpjayaraman/blob/master/level1_design2/seq_detect_1011_fix.v) and [passing log](https://github.com/vyomasystems-lab/challenges-rpjayaraman/blob/master/level1_design2/seq_detect_fix.log)
 
 ## Verification Strategy
   Two Strategy: 
