@@ -37,7 +37,7 @@ By modifying the sel value from  **5'b01101 ->  5'b01100.** it will resolve the 
 
 ![image](https://user-images.githubusercontent.com/105109240/180594474-ed255a65-4764-4962-91a8-d50bca22a0f7.png)
 
-The updated design is checked in as mux_fix.v and log mux_fix.log
+The updated design is checked in as [mux_fix.v](https://github.com/vyomasystems-lab/challenges-rpjayaraman/blob/master/level1_design1/mux_fix.log) and log [mux_fix.log](https://github.com/vyomasystems-lab/challenges-rpjayaraman/blob/master/level1_design1/mux_fix.log)
 
 ## Verification Strategy
 
