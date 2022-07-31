@@ -10,6 +10,7 @@
 ## APB DESIGN
 
 DUT from : https://github.com/courageheart/AMBA_APB_SRAM
+
   APB slave SRAM core (Design) as a slave of APB Master (Testbench). SRAM as a slave is a memory core used to write and read data via APB bus interface. The slave core also supports an error response in case of accessing out of bound address either for reading or writing, wait state and along with resizable memory block.
   ![image](https://user-images.githubusercontent.com/105109240/182030138-101ef0cf-294c-40dd-a44d-4a302adbee3f.png)
 
