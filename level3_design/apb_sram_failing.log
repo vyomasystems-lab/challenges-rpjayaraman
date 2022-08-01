@@ -1,41 +1,53 @@
 make -f Makefile results.xml
-make[1]: Entering directory '/workspace/challenges-rpjayaraman/level3_design'
+make[1]: Entering directory '/workspace/Data-science-with-Python/challenges-rpjayaraman-master/level3_design'
 MODULE=test_apb_v3_sram    TESTCASE= TOPLEVEL=apb_v3_sram          TOPLEVEL_LANG=verilog \
          /home/linuxbrew/.linuxbrew/bin/vvp -M /workspace/.pyenv_mirror/user/3.8.13/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp 
      -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:76   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
      -.--ns INFO     cocotb.gpi                         ../gpi/GpiCommon.cpp:99   in gpi_print_registered_impl       VPI registered
      0.00ns INFO     Running on Icarus Verilog version 11.0 (stable)
      0.00ns INFO     Running tests with cocotb v1.6.2 from /workspace/.pyenv_mirror/fakeroot/versions/3.8.13/lib/python3.8/site-packages/cocotb
-     0.00ns INFO     Seeding Python random module with 1659180428
+     0.00ns INFO     Seeding Python random module with 1659374698
      0.00ns WARNING  Pytest not found, assertion rewriting will not occur
      0.00ns INFO     Found test test_apb_v3_sram.test_apb
      0.00ns INFO     Found test test_apb_v3_sram.test_slave_err_test
-     0.00ns INFO     running test_apb (1/2)
+     0.00ns INFO     Found test test_apb_v3_sram.reset_test_apb
+     0.00ns INFO     running test_apb (1/3)
      0.00ns INFO     #### Directed Test ######
  15000.00ns INFO     #### Writing DATA ######
- 40000.00ns INFO     WRITE OP: PSEL: 1 PWRITE: 1 PADDR 22 PWDATA 0 PREADY 1
+ 40000.00ns INFO     WRITE OP: PSEL: 1 PWRITE: 1 PADDR 6 PWDATA 9 PREADY 1
  40000.00ns INFO     #### Reading DATA ######
- 80000.00ns INFO     READ OP: PSEL: 1 PWRITE: 0 PADDR 22 READ_DATA 0 PREADY 1
+ 80000.00ns INFO     READ OP: PSEL: 1 PWRITE: 0 PADDR 6 READ_DATA 9 PREADY 1
  80000.00ns INFO     #### End of Directed Test ######
  80000.00ns INFO     test_apb passed
- 80000.00ns INFO     running test_slave_err_test (2/2)
+ 80000.00ns INFO     running test_slave_err_test (2/3)
  80000.00ns INFO     #### Slave Error Test ######
-100000.00ns INFO     Read operation
-120000.00ns INFO     OP: PSEL: 1 PWRITE: 0 PADDR 72 PWDATA 0 PREADY 1
+120000.00ns INFO     OP: PSEL: 1 PWRITE: 1 PADDR 92 PWDATA 9 PREADY 1
 130000.00ns INFO     Slave Error response is 0
 130000.00ns INFO     test_slave_err_test failed
                      Traceback (most recent call last):
-                       File "/workspace/challenges-rpjayaraman/level3_design/test_apb_v3_sram.py", line 99, in test_slave_err_test
+                       File "/workspace/Data-science-with-Python/challenges-rpjayaraman-master/level3_design/test_apb_v3_sram.py", line 99, in test_slave_err_test
                          assert(dut.PSLVERR.value == 1), "Slave error is not asserted"
                      AssertionError: Slave error is not asserted
-130000.00ns INFO     **********************************************************************************************
+130000.00ns INFO     running reset_test_apb (3/3)
+130000.00ns INFO     #### Reset Test ######
+145000.00ns INFO     #### Writing DATA ######
+170000.00ns INFO     WRITE OP: PSEL: 1 PWRITE: 1 PADDR 21 PWDATA 11 PREADY 1
+170000.00ns INFO     #### Reading DATA ######
+210000.00ns INFO     READ OP: PSEL: 1 PWRITE: 0 PADDR 21 READ_DATA 0 PREADY 0
+210000.00ns INFO     reset_test_apb failed
+                     Traceback (most recent call last):
+                       File "/workspace/Data-science-with-Python/challenges-rpjayaraman-master/level3_design/test_apb_v3_sram.py", line 148, in reset_test_apb
+                         assert dut.PWDATA.value == dut.PRDATA.value, "Write data is not matching with read data"
+                     AssertionError: Write data is not matching with read data
+210000.00ns INFO     **********************************************************************************************
                      ** TEST                                  STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
                      **********************************************************************************************
-                     ** test_apb_v3_sram.test_apb              PASS       80000.00           0.01   15731835.73  **
-                     ** test_apb_v3_sram.test_slave_err_test   FAIL       50000.00           0.00   17313234.06  **
+                     ** test_apb_v3_sram.test_apb              PASS       80000.00           0.00   26249262.63  **
+                     ** test_apb_v3_sram.test_slave_err_test   FAIL       50000.00           0.00   30736509.48  **
+                     ** test_apb_v3_sram.reset_test_apb        FAIL       80000.00           0.00   33133635.25  **
                      **********************************************************************************************
-                     ** TESTS=2 PASS=1 FAIL=1 SKIP=0                     130000.00           0.03    4060948.76  **
+                     ** TESTS=3 PASS=1 FAIL=2 SKIP=0                     210000.00           0.03    8299995.78  **
                      **********************************************************************************************
                      
 wait_cyc_limit:1
-make[1]: Leaving directory '/workspace/challenges-rpjayaraman/level3_design'
+make[1]: Leaving directory '/workspace/Data-science-with-Python/challenges-rpjayaraman-master/level3_design'
