@@ -139,7 +139,7 @@ async def reset_test_apb(dut):
     dut.PADDR.value = addr
     await RisingEdge(dut.PCLK)
     dut.PENABLE.value = 1
-    dut.PRESETn.value = 0
+    dut.PRESETn.value = 0            #Enabling RESET during the middle of READ operation
     await RisingEdge(dut.PCLK)
     await RisingEdge(dut.PCLK)
     cocotb.log.info('READ OP: PSEL: %d PWRITE: %d PADDR %d READ_DATA %d PREADY %d',dut.PSEL.value, dut.PWRITE.value,dut.PADDR.value,dut.PRDATA.value,dut.PREADY.value)
