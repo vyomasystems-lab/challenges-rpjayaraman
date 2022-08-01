@@ -85,5 +85,5 @@ As expected, the bug is captured in the test 2, where it checks for the assertio
     
   Credits: 
   [1] https://github.com/courageheart/AMBA_APB_SRAM
-  [2] http://web.eecs.umich.edu/~prabal/teaching/eecs373- f12/readings/ARM_AMBA3_APB.pdf
+  [2] http://web.eecs.umich.edu/~prabal/teaching/eecs373-f12/readings/ARM_AMBA3_APB.pdf
 
