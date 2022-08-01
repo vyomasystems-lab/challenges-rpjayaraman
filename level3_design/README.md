@@ -63,7 +63,9 @@ One notable feature in APB 3 is slave error response pin. This pin will get togg
   
 ### Test 3 - Reset in the middle
   It is mandatory to test the design by asserting the reset in the middle of operation to make sure the design is working properly. Here we have asserted reset in during the READ operation. As a result our checker should be able to catch the issue by asserting a FAIL. As we expected the test 3 failed with mismatch in write and read value. we can also observe from the log that READ value is 0 due to the reset.
-  
+
+![image](https://user-images.githubusercontent.com/105109240/182206856-bac7b88e-69ac-4816-a1ce-9c6d6a7f4774.png)
+
   ```
   130000.00ns INFO     #### Reset Test ######
 145000.00ns INFO     #### Writing DATA ######
